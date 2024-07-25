@@ -1,23 +1,11 @@
-name: MARKDOWN-LINT
+name: Commit Message Lint
 on:
   push:
     branches:
-    - the-one
-    paths:
-    - '*.md'
-    - '.github/**.md'
-    - 'containers/**.md'
-    - 'package-lock.json'
-    - '.github/workflows/root.mdlint.yml'
+      - the-one
   pull_request:
     branches:
-    - the-one
-    paths:
-    - '*.md'
-    - '.github/**.md'
-    - 'containers/**.md'
-    - 'package-lock.json'
-    - '.github/workflows/root.mdlint.yml'
+      - the-one
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -31,4 +19,4 @@ jobs:
           cache-dependency-path: |
             package-lock.json
       - run: npm ci
-      - run: npm run lint-md
+      - run: npm run commitlint-ci

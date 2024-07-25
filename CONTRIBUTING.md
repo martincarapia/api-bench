@@ -45,7 +45,7 @@ priority and main affected project part.
 
 - fork the repository
 - mention in the issue, that you are working on it (it will be assigned for a few weeks then)
-- create a feature branch (issue-xxx-does-something) from master
+- create a feature branch (issue-xxx-does-something) from `the-one`
 - create a draft pull request
 - mention fixes #xxx in the description (use the appropriate pull request template)
 - make your changes to the branch
@@ -113,6 +113,12 @@ git clone https://github.com/idrinth/api-bench
 cd api-bench
 npm run coai
 ```
+
+#### Running Tests Locally
+
+To see a list of available CI tasks and their corresponding commands to run them
+locally, you can run `npm run local` in the source folder. This is particularly
+useful for testing specific CI tasks before committing your changes.
 
 ### Naming conventions
 
